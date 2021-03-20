@@ -14,7 +14,7 @@
 	</parent>
 	<groupId>com.springtraining</groupId>
 	<artifactId>spring-pet-clinic</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<name>spring-pet-clinic</name>
 	<description>Spring Framework pet clinic</description>
 	<properties>
@@ -49,7 +49,7 @@
 	</build>
 	<scm>
 		<developerConnection>scm:git:https://github.com/CristianGrec/spring-pet-clinic.git</developerConnection>
-    <tag>spring-pet-clinic-0.0.1</tag>
+    <tag>spring-pet-clinic-0.0.2</tag>
   </scm>
 
 
