@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.Set;
 
 @Service
-public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     private final SpecialtiesService specialtiesService;
 
@@ -30,9 +30,9 @@ public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetSe
     @Override
     public Vet save(Vet object) {
 
-        if (object.getSpecialties().size() > 0){
+        if (object.getSpecialties().size() > 0) {
             object.getSpecialties().forEach(speciality -> {
-                if(speciality.getId() == null){
+                if (speciality.getId() == null) {
                     Specialty savedSpecialty = specialtiesService.save(speciality);
                     speciality.setId(savedSpecialty.getId());
                 }
@@ -44,11 +44,11 @@ public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetSe
 
     @Override
     public void delete(Vet object) {
-    super.delete(object);
+        super.delete(object);
     }
 
     @Override
     public void deleteById(Long id) {
-    super.deleteById(id);
+        super.deleteById(id);
     }
 }
