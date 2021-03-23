@@ -5,6 +5,7 @@ import com.springtraining.springpetclinic.repositories.OwnerRepository;
 import com.springtraining.springpetclinic.repositories.PetRepository;
 import com.springtraining.springpetclinic.repositories.PetTypeRepository;
 import com.springtraining.springpetclinic.services.OwnerService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -13,15 +14,16 @@ import java.util.Optional;
 import java.util.Set;
 @Service
 @Profile("springdatajpa")
+@Slf4j
 public class OwnerSDJpaService implements OwnerService {
     private final OwnerRepository ownerRepository;
     private final PetRepository petRepository;
      private final PetTypeRepository petTypeRepository;
-
     public OwnerSDJpaService(OwnerRepository ownerRepository, PetRepository petRepository, PetTypeRepository petTypeRepository) {
         this.ownerRepository = ownerRepository;
         this.petRepository = petRepository;
         this.petTypeRepository = petTypeRepository;
+
     }
 
     @Override
