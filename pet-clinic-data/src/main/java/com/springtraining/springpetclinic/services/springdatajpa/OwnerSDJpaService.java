@@ -26,35 +26,35 @@ public class OwnerSDJpaService implements OwnerService {
 
     }
 
-    @Override
+    //@Override
     public Set<Owner> findAll() {
         Set<Owner> owners = new HashSet<>();
          ownerRepository.findAll().forEach(owners :: add);
          return owners;
     }
 
-    @Override
+   // @Override
     public Owner findById(Long aLong) {
         Optional<Owner> owner = ownerRepository.findById(aLong);
         return owner.orElse(null);
     }
 
-    @Override
+  //  @Override
     public Owner save(Owner object) {
         return ownerRepository.save(object);
     }
 
-    @Override
+  //  @Override
     public void delete(Owner object) {
 ownerRepository.delete(object);
     }
 
-    @Override
+  //  @Override
     public void deleteById(Long aLong) {
 ownerRepository.deleteById(aLong);
     }
 
-    @Override
+  //  @Override
     public Owner findByLastName(String lastName) {
         return ownerRepository.findByLastName(lastName);
     }
